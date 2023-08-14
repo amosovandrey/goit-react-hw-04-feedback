@@ -9,12 +9,6 @@ function App() {
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
-  // state = {
-  //   good: 0,
-  //   neutral: 0,
-  //   bad: 0,
-  // };
-
   const onLeaveFeedback = feedback => {
     if (feedback === 'good') {
       setGood(good + 1);
@@ -43,10 +37,7 @@ function App() {
   return (
     <div>
       <Section title="Please leave your feedback">
-        <FeedbackOptions
-          // options={this.state}
-          onLeaveFeedback={onLeaveFeedback}
-        />
+        <FeedbackOptions onLeaveFeedback={onLeaveFeedback} />
       </Section>
       <Section title="Statistics">
         {countTotalFeedback() !== 0 ? (
