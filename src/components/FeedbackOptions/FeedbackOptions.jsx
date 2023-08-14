@@ -2,7 +2,7 @@ import React from 'react';
 import { ButtonWrapper, Button } from './FeedbackOptions.styled';
 import PropTypes from 'prop-types';
 
-const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+const FeedbackOptions = ({ onLeaveFeedback }) => {
   return (
     <ButtonWrapper>
       <Button onClick={() => onLeaveFeedback('good')}>Good</Button>
@@ -13,7 +13,6 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 };
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.object.isRequired,
   onLeaveFeedback: PropTypes.func.isRequired,
 };
 
